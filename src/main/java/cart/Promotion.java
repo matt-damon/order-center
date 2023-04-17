@@ -1,7 +1,7 @@
 package cart;
 
 import java.math.BigDecimal;
-import java.util.List;
+
 
 public abstract class Promotion {
     Long promoId;//促销ID
