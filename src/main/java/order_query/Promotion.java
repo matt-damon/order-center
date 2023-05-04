@@ -1,16 +1,13 @@
-package cart_v2;
+package order_query;
 
 import lombok.Data;
 
 import java.math.BigDecimal;
 
-@Data
 public class Promotion {
     Long id;
     String name;
     Integer type;
-    String tag;//促销标签
-    BigDecimal balance;//差额，还差多少满足促销条件
     /**
      * 单品促销，包含直降，折扣，特价
      */

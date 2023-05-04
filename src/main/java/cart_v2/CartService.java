@@ -1,16 +1,14 @@
-package cart.service;
+package cart_v2;
 
-import cart.Cart;
 
 public interface CartService {
 
     /**
      * 获取购物车清单
-     * @param 用户id,地址
+     * @param
      * @return
      */
     Cart getCart();
-
 
     boolean addItem();
 

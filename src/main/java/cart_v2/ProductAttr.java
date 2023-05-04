@@ -5,10 +5,7 @@ import java.math.BigDecimal;
 /**
  * 商品属性类
  */
-public class SkuAttr {
-
-    String storeId;//店铺id
-    String storeName;//店铺名称
+public class ProductAttr {
     String skuName;//商品名称
     String skuImageUrl;//图片链接
     String color;//颜色

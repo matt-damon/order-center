@@ -1,11 +1,9 @@
 package cart_v2;
 
-import lombok.Data;
-
 import java.math.BigDecimal;
+import java.util.List;
 
-@Data
-public class Promotion {
+public class PromotionInfo {
     Long id;
     String name;
     Integer type;
@@ -20,5 +18,6 @@ public class Promotion {
 
     BigDecimal offerAmount;//优惠减免的金额
 
+    List<Product> products;//命中该促销的商品
 
 }
