@@ -18,15 +18,18 @@ public class Product {
     Integer quantity;//商品数量
     Integer stock;//库存
     Integer limitBuyQuantity;//限购数
+
     BigDecimal originalPrice;//商品原单价
-    BigDecimal raiseAmount;//加购金额，用于加价购
+    BigDecimal addBuyAmount;//加购金额，用于加价购
 
     Long addCartTs;//加车时间
     Long lastUpdateTs;//最后操作时间
 
     Promotion parentPromotion;//上级促销信息
     boolean isGift;//是否赠品
-    List<SubPromotionItem> subPromotionItems;//子商品促销结构，赠品/加购商品
-    List<Promotion> hitPromotions; //命中的促销列表
-    List<Promotion> allPromotions;//所有促销列表
+    boolean isAddBuy;//是否加价购商品
+    List<Product> gifts;//赠品
+    List<Product> addBuyProducts;//加购商品
+
+    List<Promotion> promotions;//促销列表
 }

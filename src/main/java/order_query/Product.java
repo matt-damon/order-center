@@ -1,9 +1,5 @@
 package order_query;
 
-import cart_v2.ProductAttr;
-import cart_v2.SubPromotionItem;
-import lombok.Data;
-
 import java.math.BigDecimal;
 import java.util.List;
 

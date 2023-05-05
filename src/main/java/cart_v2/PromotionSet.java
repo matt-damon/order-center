@@ -15,5 +15,4 @@ public class PromotionSet {
 
     BigDecimal originTotalAmount;//商品总额(优惠前)
     BigDecimal totalAmount;//优惠后总金额
-
 }

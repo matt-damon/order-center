@@ -17,7 +17,6 @@ public class PromotionInfo {
     BigDecimal specialOffer;//特价
 
     BigDecimal offerAmount;//优惠减免的金额
-
     List<Product> products;//命中该促销的商品
 
 }

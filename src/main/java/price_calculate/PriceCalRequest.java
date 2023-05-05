@@ -8,8 +8,7 @@ import java.util.List;
  */
 public class PriceCalRequest {
     List<PriceCalReqItem> calReqItems;
-
     List<Coupon> coupons;//指定使用的优惠券（平台级）
     Integer integration;//指定使用的积分
-    BigDecimal eCardBalance;//电子卡余额
+    BigDecimal eCardAmount;//指定使用电子卡余额
 }

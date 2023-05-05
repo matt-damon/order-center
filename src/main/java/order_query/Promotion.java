@@ -1,6 +1,5 @@
 package order_query;
 
-import lombok.Data;
 
 import java.math.BigDecimal;
 
@@ -8,6 +7,9 @@ public class Promotion {
     Long id;
     String name;
     Integer type;
+
+    Boolean hit;//是否命中
+
     /**
      * 单品促销，包含直降，折扣，特价
      */
