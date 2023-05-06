@@ -1,8 +1,5 @@
 package order_split;
 
-import cart_v2.Cart;
-import cart_v2.StoreItem;
-
 import java.util.List;
 
 public interface PreSplitService {
@@ -39,6 +36,7 @@ public interface PreSplitService {
 //     * 保存或更新拆分流程
 //     * @param splitFlow
 //     * @return
+
 //     */
 //    APIResult saveOrUpdateOrderSplitFlow(OrderSplitFlow splitFlow);
 //
@@ -50,11 +48,10 @@ public interface PreSplitService {
 //    APIResult queryOrderSplitFlow(OrderSplitFlow splitFlow);
 
     /**
-     * 预拆分，包含价格计算过程
+     * 预拆分，包含商品分组和价格计算过程
      * @param
      * @return
      */
-    List<PreSplitResItem> preSplit(List<StoreItem> );
-
+    PreSplitResponse preSplit(PreSplitRequest request);
 
 }

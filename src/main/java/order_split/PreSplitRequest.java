@@ -1,13 +1,10 @@
-package price_calculate;
+package order_split;
 
-import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * 价格计算入参
- */
-public class PriceCalRequest {
+public class PreSplitRequest {
     String userid;
+
     //运费计算和地址相关
     /** 国家编码 */
     String countryCode ;
@@ -22,8 +19,5 @@ public class PriceCalRequest {
     /** 详细地址 */
     String detailAddress ;
 
-    List<PriceCalReqItem> calReqItems;
-    List<Coupon> coupons;//指定使用的优惠券（平台级）
-    Integer integration;//指定使用的积分
-    BigDecimal eCardAmount;//指定使用电子卡余额
+    List<Product> products;
 }

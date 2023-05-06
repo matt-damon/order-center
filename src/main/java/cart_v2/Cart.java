@@ -20,7 +20,7 @@ public class Cart {
 
     List<StoreItem> storeItems;//店铺列表
 
-    Promotion cartPromotion;//购物车级别的促销，整车促销
+    Promotion promotion;//购物车级别的促销，整车促销
 
     BigDecimal originTotalAmount;//商品优惠前总额
     BigDecimal promotionOfferAmount;//促销优惠金额

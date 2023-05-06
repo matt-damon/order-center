@@ -1,4 +1,7 @@
-package price_calculate;
+package order_split;
+
+import price_calculate.Coupon;
+import price_calculate.Promotion;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -21,7 +24,7 @@ public class Product {
     BigDecimal eCardAmount;//电子卡余额抵扣金额
     BigDecimal paidAmount;//实付金额=成交金额-优惠券抵扣金额-积分抵扣金额-电子卡余额抵扣金额
 
-    Promotion parentPromotion;//父级促销，用于赠品，加价购
+    Promotion parentPromotion;//父级促销
     List<Promotion> promotions; //指定或命中的促销列表
     List<Coupon> coupons;//优惠券分摊情况
 
