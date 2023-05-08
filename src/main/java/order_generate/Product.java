@@ -32,7 +32,7 @@ public class Product {
     Boolean isReturn;//是否可退换
 
     Promotion parentPromotion;//父级促销
-    List<Promotion> promotions; //指定或命中的促销列表
+    List<Promotion> promotions; //命中的促销列表
     List<Coupon> coupons;//优惠券分摊情况
 
     BigDecimal originalAmount;//商品原价
@@ -40,6 +40,7 @@ public class Product {
     BigDecimal promotionAmount;//促销优惠（减免）金额
     BigDecimal soldAmount;//成交金额=商品原价-促销优惠金额
     BigDecimal couponAmount;//优惠券抵扣金额
+    Integer integration;//抵扣积分
     BigDecimal integrationAmount; //积分抵扣金额
     BigDecimal eCardAmount;//电子卡余额抵扣金额
     BigDecimal paidAmount;//实付金额=成交金额-优惠券抵扣金额-积分抵扣金额-电子卡余额抵扣金额

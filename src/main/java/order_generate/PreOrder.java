@@ -21,6 +21,8 @@ public class PreOrder {
     Date deliveryReserveTime ;   /** 预约配送时间 */
     Date shippingTimeLimit ;    /** 发货时效 */
 
+
+
     Integer invoiceType ;/** 发票类型：0->不开发票；1->电子发票；2->纸质发票 */
     Integer invoiceTitleType;//抬头类型
     String invoiceTitle;/** 开票抬头 */

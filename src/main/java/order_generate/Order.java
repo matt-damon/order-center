@@ -1,11 +1,11 @@
 package order_generate;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
 
 public class Order {
-    
     /** 订单编号 */
     Long id;
     /** 订单类型 */
@@ -16,6 +16,9 @@ public class Order {
 
     /** 店铺id */
     String storeId;
+    String storeName;
+    Integer storeType;//店铺类型
+
     /** 源系统id */
     Integer srcSystemId;
     /** 源系统名称 */
@@ -25,40 +28,29 @@ public class Order {
     /** 源订单id */
     Long srcOrderId;
 
-
     /** 用户id */
     String userId ;
     /** 用户昵称 */
     String userNickName ;
     String phone;//下单手机号
-
-
-    /** 下单时间 */
-    Date createTime;
-    /** 订单状态 */
-    Integer status;
-
     /** 买家留言 */
     String buyerNote ;
 
-
-    /** 订单总金额 */
-    Double originalAmount ;
-    /** 应付金额（实际支付金额） */
-    Double payAmount ;
-    /** 运费金额 */
-    Double freightAmount ;
-    /** 促销优惠金额 */
-    Double promotionAmount ;
-
-
-
-    /** 优惠券优惠金额 */
-    Double couponAmount ;
-
+    /**商品信息 */
+    List<Product> products;
     /** 使用的促销信息 */
     List<Promotion> promotions;
+    /** 使用优惠券信息 */
+    List<Coupon> coupons ;
 
+    BigDecimal originalAmount ;/** 应付总金额（SUM(商品原价*数量) */
+    BigDecimal promotionAmount;/** 促销优惠金额 */
+    BigDecimal couponAmount ;/** 优惠券优惠金额 */
+    Integer integration;//抵扣积分
+    BigDecimal integrationAmount;//积分抵扣金额
+    BigDecimal eCardAmount;//电子卡余额抵扣金额
+    BigDecimal paidAmount ;/** 实付金额（） */
+    BigDecimal freightAmount ;/** 运费金额 */
 
     /** 支付方式 */
     Integer payType ;
@@ -69,12 +61,15 @@ public class Order {
     /** 支付流水号 */
     String payFlowNo ;
 
-
-    /** 发票类型：0->不开发票；1->电子发票；2->纸质发票 */
-    Integer invoiceType ;
-    /** 使用优惠券信息 */
-    String couponInfo ;
-
+    Integer invoiceType ;/** 发票类型：0->不开发票；1->电子发票；2->纸质发票 */
+    Integer invoiceTitleType;//抬头类型
+    String invoiceTitle;/** 开票抬头 */
+    String taxNo;//税号
+    String invoiceContent;  /** 开票内容（明细或者品类） */
+    String invoiceReceiver;    /** 收票人姓名 */
+    String invoiceReceiverPhone;   /** 收票人手机 */
+    String invoiceReceiverEmail;/** 收票人邮箱 */
+    String invoiceReceiverAddress;/** 收票人地址 */
 
     /** 收货人姓名 */
     String receiverName ;
@@ -93,9 +88,13 @@ public class Order {
     /** 详细地址 */
     String detailAddress ;
 
+    /** 订单状态 */
+    Integer status;
     /** 删除状态：0->未删除；1->已删除 */
     Integer deleteStatus ;
 
+    /** 下单时间 */
+    Date createTime;
     /** 支付时间 */
     Date paymentTime ;
     /** 发货时间 */

@@ -8,6 +8,8 @@ import java.util.List;
 public class OrderCreateRequest {
     String userid;//用户id
 
+    String receiverName ;/** 收货人姓名 */
+    String receiverPhone ;/** 收货人电话 */
     String countryCode ;/** 国家编码 */
     String level1AddrCode ;    /** 一级地址编码 */
     String level2AddrCode ;    /** 二级地址编码 */
