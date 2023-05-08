@@ -1,4 +1,4 @@
-package order_receive;
+package order_generate;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

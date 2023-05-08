@@ -20,21 +20,10 @@ public class Product {
     String supplierId;//供应商编号
     String supplierName;//供应商名字
 
-    boolean isVirtual;//是否虚拟商品
-    boolean isGift;//是否赠品
-    boolean isRaiseProduct;//是否加购商品
+
 
     Integer quantity;//商品数量
-    BigDecimal taxRate;//税率
-    BigDecimal originalPrice;//商品原单价
-    BigDecimal raiseAmount;//加购金额，用于加价购
-    BigDecimal promotionAmount;//促销优惠金额
-    BigDecimal couponAmount;//优惠券抵扣金额
-    BigDecimal integrationAmount; //积分抵扣金额
-    BigDecimal freightAmount;//运费金额
-    BigDecimal rebateAmount;//返佣金额
-    BigDecimal totalAmount;//优惠后的金额
-    Integer giftIntegration;//赠送积分
+
 
     List<Promotion> promotions; //命中的促销列表
 

@@ -1,6 +1,6 @@
 package order_query;
 
-import order_receive.Order;
+import order_generate.Order;
 
 import java.util.List;
 

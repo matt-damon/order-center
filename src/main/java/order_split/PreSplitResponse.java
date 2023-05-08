@@ -6,6 +6,8 @@ import java.util.List;
 
 public class PreSplitResponse {
 
+    String preSplitId;//预拆分id，用于提单时校验
+
     List<PreOrder> preOrders;//预订单（店铺+商品）列表
 
     //多个preOrders的合计

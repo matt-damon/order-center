@@ -1,16 +1,19 @@
-package order_receive;
+package order_generate;
 
 import common.APIResult;
 
 import java.util.List;
 
-public interface OrderReceiveService {
+public interface OrderGenerateService {
 
     /**
      *
      * @param orders
      * @return
      */
-    APIResult receiveOrder(List<Order> orders);
+    APIResult orderCreate(List<Order> orders);
+
+
+
 
 }
