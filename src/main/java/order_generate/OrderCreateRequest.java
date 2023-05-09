@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class OrderCreateRequest {
-    String userid;//用户id
+    String userId;//用户id
 
     String receiverName ;/** 收货人姓名 */
     String receiverPhone ;/** 收货人电话 */

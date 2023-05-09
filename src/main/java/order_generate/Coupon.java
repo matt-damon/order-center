@@ -13,6 +13,4 @@ public class Coupon {
     BigDecimal threshold;//使用门槛
     BigDecimal offerAmount;//优惠金额
     BigDecimal shareOfferAmount;//优惠分摊金额
-
-    Boolean used;//是否选中
 }

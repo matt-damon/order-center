@@ -14,14 +14,11 @@ import java.util.List;
 public class PreOrder {
     Long storeId;//店铺id，跨店铺时为促销id
     List<Product> products;//商品列表
-    List<Promotion> promotions; //促销列表
-    List<Coupon> coupons;//使用的优惠券
+    List<Coupon> coupons;//指定使用的优惠券
 
     Integer deliveryType ;    /** 配送方式 */
     Date deliveryReserveTime ;   /** 预约配送时间 */
     Date shippingTimeLimit ;    /** 发货时效 */
-
-
 
     Integer invoiceType ;/** 发票类型：0->不开发票；1->电子发票；2->纸质发票 */
     Integer invoiceTitleType;//抬头类型

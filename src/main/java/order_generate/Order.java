@@ -9,32 +9,26 @@ public class Order {
     /** 订单编号 */
     Long id;
     /** 订单类型 */
-    Integer orderType ;
+    Integer orderType;
+
+    /** 源订单id */
+    Long srcOrderId;
     /** 渠道编码 */
     String channelId ;
     String channelName;//渠道名称
-
-    /** 店铺id */
-    String storeId;
-    String storeName;
-    Integer storeType;//店铺类型
-
-    /** 源系统id */
-    Integer srcSystemId;
-    /** 源系统名称 */
-    String srcSystemName;
-    /** 源订单类型 */
-    Integer srcOrderType ;
-    /** 源订单id */
-    Long srcOrderId;
-
+    String operator;//下单操作者，线下使用
     /** 用户id */
     String userId ;
     /** 用户昵称 */
     String userNickName ;
     String phone;//下单手机号
     /** 买家留言 */
-    String buyerNote ;
+    String userNote ;
+
+    /** 店铺id */
+    String storeId;
+    String storeName;
+    Integer storeType;//店铺类型
 
     /**商品信息 */
     List<Product> products;
@@ -43,21 +37,22 @@ public class Order {
     /** 使用优惠券信息 */
     List<Coupon> coupons ;
 
-    BigDecimal originalAmount ;/** 应付总金额（SUM(商品原价*数量) */
+    Integer quantity;//商品总数
+    BigDecimal originalAmount ;/** 商品总金额（SUM(商品原价*数量) */
     BigDecimal promotionAmount;/** 促销优惠金额 */
     BigDecimal couponAmount ;/** 优惠券优惠金额 */
     Integer integration;//抵扣积分
     BigDecimal integrationAmount;//积分抵扣金额
     BigDecimal eCardAmount;//电子卡余额抵扣金额
-    BigDecimal paidAmount ;/** 实付金额（） */
     BigDecimal freightAmount ;/** 运费金额 */
+    BigDecimal paidAmount ;/** 实付金额 */
 
     /** 支付方式 */
     Integer payType ;
     /** 支付账号 */
     String payAccount ;
-    /** 商户订单号 */
-    String merchantOrderNo ;
+    /** 商户号 */
+    String merchantId ;
     /** 支付流水号 */
     String payFlowNo ;
 
@@ -91,14 +86,14 @@ public class Order {
     /** 订单状态 */
     Integer status;
     /** 删除状态：0->未删除；1->已删除 */
-    Integer deleteStatus ;
+    Integer delete ;
 
     /** 下单时间 */
     Date createTime;
     /** 支付时间 */
-    Date paymentTime ;
+    Date payTime ;
     /** 发货时间 */
-    Date deliveryTime ;
+    Date shippingTime ;
     /** 评价时间 */
     Date commentTime ;
     /** 修改时间 */
@@ -116,5 +111,4 @@ public class Order {
     Date shippingTimeLimit ;
     /** 配送时效*/
     Date deliveryTimeLimit ;
-
 }
