@@ -2,8 +2,6 @@ package order_change;
 
 import common.APIResult;
 import order_change.change_rule.ChangeRule;
-import order_change.order_state_machine.Order;
-import order_change.order_state_machine.OrderEventsEnum;
 
 public interface OrderChangeService {
 

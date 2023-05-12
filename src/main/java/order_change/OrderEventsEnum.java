@@ -1,4 +1,4 @@
-package order_change.order_state_machine;
+package order_change;
 
 public enum OrderEventsEnum {
     PAY,//支付

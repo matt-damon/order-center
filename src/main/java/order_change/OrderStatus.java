@@ -1,4 +1,4 @@
-package order_change.change_rule;
+package order_change;
 
 public class OrderStatus {
     Integer id;//状态id

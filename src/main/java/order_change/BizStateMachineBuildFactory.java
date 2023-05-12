@@ -1,6 +1,5 @@
-package order_change.order_state_machine;
+package order_change;
 
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.statemachine.StateMachine;
 

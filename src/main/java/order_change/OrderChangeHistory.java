@@ -7,23 +7,25 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 订单操作记录表;
- * @author : http://www.chiner.pro
- * @date : 2023-4-19
+ * 订单操作记录表
  */
 
 public class OrderChangeHistory implements Serializable,Cloneable{
 
-    private Long id ;
+    private Long id ;//变更记录id
 
-    private Long orderId ;
+    private Long orderId;//订单id
 
-    private String operateMan ;
+    private Integer changeType;//变更类型
 
-    private Date operateTime ;
+    private String operator ;//变更人
 
-    private Integer orderStatus ;
+    private Date changeTime ;//变更时间
 
-    private String note ;
+    private String beforeContent;//变更前内容
+
+    private String afterContent;//变更后内容
+
+    private String note ;//备注
 
 }
