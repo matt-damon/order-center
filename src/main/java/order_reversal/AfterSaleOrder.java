@@ -7,15 +7,11 @@ import java.util.List;
 public class AfterSaleOrder {
     Long id;//售后单号
     Integer type;//售后类型，0：退货，1：退货退款
-
     Integer reason;//售后原因
     Integer productStatus;//货物状态，是否收到货
     List<String> imageUrls;//图片
-    Integer status;//售后单状态
-
     String userId;//用户id
     Long orderId;
-    Integer orderType;
     String channelId;
     String storeId;
 
@@ -46,6 +42,7 @@ public class AfterSaleOrder {
     String deliverySn;//退货快递单号
     BigDecimal returnFreight;//退货运费
 
+    Integer status;//售后单状态
     Date applyTime;//申请时间
     Date updateTime;//最后更新时间
 
