@@ -1,5 +1,9 @@
 package order_query;
 
+import order_generate.Coupon;
+import order_generate.Product;
+import order_generate.Promotion;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -7,119 +11,108 @@ import java.util.List;
 
 public class Order {
     /** 订单编号 */
-    private Long id ;
-    /** 源系统id */
-    private Integer srcSystemId;
-    /** 源系统名称 */
-    private String srcSystemName;
-    /** 源订单id */
-    private Long srcOrderId;
-    /** 源订单类型 */
-    private Integer srcOrderType;
-    /** 用户id */
-    private String userId ;
+    Long id;
     /** 订单类型 */
-    private Integer orderType ;
-    /** 渠道编号 */
-    private Integer channelId;
-    /** 渠道名称 */
-    private String channelName;
-    /** 门店编号 */
-    private String storeId;
-    /** 门店名称 */
-    private String storeName;
+    Integer orderType;
 
+    /** 源订单id */
+    Long srcOrderId;
+    /** 渠道编码 */
+    String channelId ;
+    String channelName;//渠道名称
+    String operator;//下单操作者，线下使用
+    /** 用户id */
+    String userId ;
     /** 用户昵称 */
-    private String userNickName ;
+    String userNickName ;
+    String phone;//下单手机号
     /** 买家留言 */
-    private String userComments ;
+    String userNote ;
 
-    /** 商品信息 */
-    private List<Product> products;
-    /** 命中的促销信息 */
-    private List<Promotion> promotions;
-    /** 使用的优惠券 */
-    private List<Coupon> coupons;
+    /** 店铺id */
+    String storeId;
+    String storeName;
+    Integer storeType;//店铺类型
 
-    /** 商品数量*/
-    private Integer quantity;
-    /** 商品总金额（原价） 不含税*/
-    private BigDecimal originalAmount ;
-    /** 税费 */
-    private BigDecimal tax;
-    /** 结算金额（实际支付金额） 含税*/
-    private BigDecimal totalAmount ;
-    /** 促销优惠金额 */
-    private BigDecimal promotionAmount ;
-    /** 优惠券优惠金额 */
-    private BigDecimal couponAmount ;
-    /** 积分抵扣金额 */
-    private BigDecimal integrationAmount;
-    /** 运费金额 */
-    private BigDecimal freightAmount;
+    /**商品信息 */
+    List<Product> products;
+    /** 使用的促销信息 */
+    List<Promotion> promotions;
+    /** 使用优惠券信息 */
+    List<Coupon> coupons ;
 
-    /** 支付时间 */
-    private Date payTime ;
+    Integer quantity;//商品总数
+    BigDecimal originalAmount ;/** 商品总金额（SUM(商品原价*数量) */
+    BigDecimal promotionAmount;/** 促销优惠金额 */
+    BigDecimal couponAmount ;/** 优惠券优惠金额 */
+    Integer integration;//抵扣积分
+    BigDecimal integrationAmount;//积分抵扣金额
+    BigDecimal eCardAmount;//电子卡余额抵扣金额
+    BigDecimal freightAmount ;/** 运费金额 */
+    BigDecimal paidAmount ;/** 实付金额 */
+
     /** 支付方式 */
-    private Integer payType ;
+    Integer payType ;
     /** 支付账号 */
-    private String payAccount ;
+    String payAccount ;
     /** 商户号 */
-    private String merchantId;
+    String merchantId ;
     /** 支付流水号 */
-    private String payFlowNo ;
+    String payFlowNo ;
 
-    /** 发票类型：0->不开发票；1->电子发票；2->纸质发票 */
-    private Integer invoiceType ;
-    /** 开票状态 */
-    private Integer invoiceStatus;
-    /** 开票抬头 */
-    private String invoiceTitle;
-    /** 开票内容（明细或者品类） */
-    private String invoiceContent;
-    /** 收票人姓名 */
-    private String invoiceReceiver;
-    /** 收票人手机 */
-    private String invoiceReceiverPhone;
-    /** 收票人邮箱 */
-    private String invoiceReceiverEmail;
-    /** 收票人地址 */
-    private String invoiceReceiverAddress;
+    Integer invoiceType ;/** 发票类型：0->不开发票；1->电子发票；2->纸质发票 */
+    Integer invoiceTitleType;//抬头类型
+    String invoiceTitle;/** 开票抬头 */
+    String taxNo;//税号
+    String invoiceContent;  /** 开票内容（明细或者品类） */
+    String invoiceReceiver;    /** 收票人姓名 */
+    String invoiceReceiverPhone;   /** 收票人手机 */
+    String invoiceReceiverEmail;/** 收票人邮箱 */
+    String invoiceReceiverAddress;/** 收票人地址 */
 
     /** 收货人姓名 */
-    private String receiverName ;
+    String receiverName ;
     /** 收货人电话 */
-    private String receiverPhone ;
+    String receiverPhone ;
     /** 国家编码 */
-    private String countryCode ;
+    String countryCode ;
     /** 一级地址编码 */
-    private String level1AddrCode ;
+    String level1AddrCode ;
     /** 二级地址编码 */
-    private String level2AddrCode ;
+    String level2AddrCode ;
     /** 三级地址编码 */
-    private String level3AddrCode ;
+    String level3AddrCode ;
     /** 四级地址编码 */
-    private String level4AddrCode ;
+    String level4AddrCode ;
     /** 详细地址 */
-    private String detailAddress ;
+    String detailAddress ;
 
-    /** 配送方式 */
-    private Integer deliveryType;
-    /** 发货时效 */
-    private Date shippingTimeLimit;
-    /** 配送时效*/
-    private Date deliveryTimeLimit;
-    /** 预约配送时间 */
-    private Date deliveryReserveTime;
+    /** 订单状态 */
+    Integer status;
+    /** 删除状态：0->未删除；1->已删除 */
+    Integer delete ;
 
     /** 下单时间 */
-    private Date createTime;
-    /** 成交时间 */
-    private Date dealTime ;
+    Date createTime;
+    /** 支付时间 */
+    Date payTime ;
+    /** 发货时间 */
+    Date shippingTime ;
     /** 评价时间 */
-    private Date commentTime ;
-    /** 订单状态 */
-    private Integer status;
-    /** 删除状态：0->未删除；1->已删除 */
-    private Integer delete;
+    Date commentTime ;
+    /** 修改时间 */
+    Date modifyTime ;
+
+    /** 配送方式 */
+    Integer deliveryType ;
+    /** 配送单号 */
+    String deliverySn ;
+    /** 配送公司 */
+    String deliveryCompany ;
+    /** 预约配送时间 */
+    Date deliveryReserveTime ;
+    /** 发货时效 */
+    Date shippingTimeLimit ;
+    /** 配送时效*/
+    Date deliveryTimeLimit ;
 }

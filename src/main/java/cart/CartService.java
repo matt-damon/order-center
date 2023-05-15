@@ -1,4 +1,4 @@
-package cart_v2;
+package cart;
 
 
 public interface CartService {

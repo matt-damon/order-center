@@ -1,4 +1,6 @@
-package order_reversal;
+package order_query;
+
+import order_reversal.Product;
 
 import java.math.BigDecimal;
 import java.util.Date;

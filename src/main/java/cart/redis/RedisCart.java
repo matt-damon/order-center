@@ -1,6 +1,6 @@
-package cart_v2.redis;
+package cart.redis;
 
-import cart_v2.StoreItem;
+import cart.StoreItem;
 
 import java.util.List;
 

@@ -1,7 +1,6 @@
 package order_change;
 
 import common.APIResult;
-import order_change.change_rule.ChangeRule;
 
 public interface OrderChangeService {
 
@@ -15,5 +14,9 @@ public interface OrderChangeService {
     APIResult saveOrUpdateChangeRule(ChangeRule rule);
 
     APIResult queryChangeRule(Integer orderType);
+
+    APIResult saveOrderOperateRecord(OrderOperateRecord record);
+
+    APIResult queryOrderOperateRecord(Long orderId);
 
 }

@@ -1,4 +1,4 @@
-package cart_v2;
+package cart;
 
 import lombok.Data;
 import java.math.BigDecimal;

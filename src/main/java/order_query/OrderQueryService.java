@@ -20,4 +20,19 @@ public interface OrderQueryService {
      */
     Order queryOrderDetail(Long orderId);
 
+
+    /**
+     * 查询售后单列表
+     * @param order
+     * @return
+     */
+    List<AfterSaleOrder> queryAfterSaleOrderList(AfterSaleOrder order);
+
+    /**
+     * 查询售后单单详情
+     * @param afterSaleOrderId
+     * @return
+     */
+    Order queryAfterSaleOrderDetail(Long afterSaleOrderId);
+
 }

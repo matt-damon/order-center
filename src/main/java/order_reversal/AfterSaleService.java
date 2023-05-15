@@ -11,4 +11,8 @@ public interface AfterSaleService {
      */
     APIResult createAfterSaleOrder(AfterSaleOrder order);
 
+    APIResult saveAfterSaleOperateRecord(AfterSaleOperateRecord record);
+
+    APIResult queryAfterSaleOperateRecord(Long afterSaleOrderId);
+
 }
