@@ -1,7 +1,8 @@
 package order_change;
 
+
 public class ChangeField {
-    Integer id;
+    Long id;
     String name;
+    String nameCn;
 }
-// 0, 1, 0,
