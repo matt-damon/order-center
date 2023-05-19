@@ -8,7 +8,7 @@ public class Product {
     Long id;//商品id
     Long storeId;//店铺id
     Integer quantity;//商品数量
-
+    Integer limitBuyQty;//商品限购数量
     Boolean isGift;//是否赠品
     Boolean isAddBuy;//是否加购商品
 

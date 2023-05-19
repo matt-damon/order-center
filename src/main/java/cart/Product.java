@@ -1,7 +1,6 @@
 package cart;
 
 import lombok.Data;
-import order_query.Promotion;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -32,4 +31,5 @@ public class Product {
     List<Product> addBuyProducts;//加购商品
 
     List<Promotion> promotions;//促销列表
+    List<Coupon> coupons;//商品优惠券分摊情况
 }

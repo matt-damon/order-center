@@ -7,7 +7,7 @@ import java.util.List;
  * 价格计算入参
  */
 public class PriceCalRequest {
-    String userid;
+    String userId;
     //运费计算和地址相关
     /** 国家编码 */
     String countryCode ;

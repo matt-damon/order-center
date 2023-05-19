@@ -10,6 +10,6 @@ public interface PromotionService {
      *
      * @return
      */
-    PromotionCart getPromotion();
+    PromotionResult getPromotion();
 
 }
